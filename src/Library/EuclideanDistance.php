@@ -19,7 +19,8 @@ class EuclideanDistance extends AlgorithmBase implements AlgorithmInterface
     public function compare(): string
     {
         $sumVector = 0;
-        for ($i = 0; $i < $this->getBiggestVectorLength(); $i++) {
+        $vectorLength = $this->getBiggestVectorLength();
+        for ($i = 0; $i < $vectorLength; $i++) {
             $sumVector = bcadd(bcpow(bcsub($this->_vectorA[$i] ?? 0, $this->_vectorB[$i] ?? 0, self::CALCULATE_SCALE), 2, self::CALCULATE_SCALE), $sumVector, self::CALCULATE_SCALE);
         }
         return bcsqrt($sumVector, $this->_scale);

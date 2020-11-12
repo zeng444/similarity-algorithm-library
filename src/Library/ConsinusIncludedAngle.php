@@ -32,7 +32,8 @@ class ConsinusIncludedAngle extends AlgorithmBase implements AlgorithmInterface
     {
         $sumVectorA = 0;
         $sumVectorB = 0;
-        for ($i = 0; $i < $this->getBiggestVectorLength(); $i++) {
+        $biggestVectorLength = $this->getBiggestVectorLength();
+        for ($i = 0; $i < $biggestVectorLength; $i++) {
             if (isset($this->_vectorA[$i]) && $this->_vectorA[$i] != 0) {
                 $sumVectorA = bcadd($sumVectorA, bcpow($this->_vectorA[$i], 2, self::CALCULATE_SCALE), self::CALCULATE_SCALE);
             }
@@ -59,7 +60,8 @@ class ConsinusIncludedAngle extends AlgorithmBase implements AlgorithmInterface
     private function denominator(): string
     {
         $denominator = 0;
-        for ($i = 0; $i < $this->getBiggestVectorLength(); $i++) {
+        $biggestVectorLength = $this->getBiggestVectorLength();
+        for ($i = 0; $i < $biggestVectorLength; $i++) {
             if (!isset($this->_vectorA[$i]) || $this->_vectorA[$i] == 0 || !isset($this->_vectorB[$i]) || $this->_vectorB[$i] == 0) {
                 continue;
             }

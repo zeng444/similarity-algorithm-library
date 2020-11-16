@@ -5,7 +5,7 @@
 - Jaccard Index
 
 ```php
-$alg = new \Janfish\Algorithm\Similarity(Similarity::JS_ALG);
+$alg = new \Janfish\Algorithm\Similarity(Similarity::JI_ALG);
 $alg->setVectors([1, 2, 3, 4, 5], [3, 4, 56, 7, 2]);
 var_dump($alg->compare());
 ```

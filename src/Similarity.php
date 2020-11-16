@@ -25,7 +25,7 @@ class Similarity implements AlgorithmInterface
     /**
      *
      */
-    const JS_ALG = 'JaccardIndex';
+    const JI_ALG = 'JaccardIndex';
 
     /**
      *
@@ -44,7 +44,7 @@ class Similarity implements AlgorithmInterface
      */
     public function __construct(string $algorithm = self::CIA_ALG)
     {
-        if (!in_array($algorithm, [self::CIA_ALG, self::ED_ALG, self::JS_ALG])) {
+        if (!in_array($algorithm, [self::CIA_ALG, self::ED_ALG, self::JI_ALG])) {
             throw  new \Exception('algorithm "' . $algorithm . '" not exist');
         }
         $className = "\\Janfish\\Algorithm\\Library\\" . $algorithm;

@@ -10,7 +10,7 @@ var_dump($alg->compare());
 
 
 //Jaccard Index
-$alg = new Similarity(Similarity::JS_ALG);
+$alg = new Similarity(Similarity::JI_ALG);
 $alg->setVectors([1, 2, 3, 4, 5], [3, 4, 56, 7, 2, 2, 3, 4]);
 var_dump($alg->compare());
 

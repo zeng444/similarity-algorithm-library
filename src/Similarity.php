@@ -28,6 +28,11 @@ class Similarity implements AlgorithmInterface
     const JS_ALG = 'JaccardIndex';
 
     /**
+     *
+     */
+    const MD_ALG = 'ManhattanDistance';
+
+    /**
      * @var
      */
     private $_instance;

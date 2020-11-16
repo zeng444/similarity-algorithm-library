@@ -10,6 +10,14 @@ $alg->setVectors([1, 2, 3, 4, 5], [3, 4, 56, 7, 2]);
 var_dump($alg->compare());
 ```
 
+- Manhattan Distance
+
+```php
+$alg = new Similarity(Similarity::MD_ALG);
+$alg->setVectors([1, 2, 3, 4, 5], [3, 4, 56, 7, 2, 2, 3, 4]);
+var_dump($alg->compare());
+```
+
 - Euclidean Distance
 
 ```php
